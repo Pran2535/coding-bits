@@ -1,0 +1,33 @@
+import { View, Text, Image } from 'react-native'
+import React from 'react'
+
+const PopularBusinessCard = ({business}) => {
+  return (
+    <View style={{
+        marginLeft:20,
+        padding:10,
+        backgroundColor:'#fff',
+        borderRadius:15
+    }}>
+      <Image source={{uri:business?.imageUrl}}
+      style={{width:200,
+        height:130,
+        borderRadius:15
+
+      }}
+      />
+      <View style={{marginTop:7}}>
+        <Text style={{
+            fontFamily:'outfit-bold',
+            fontSize:15,
+        }}>{business.name}</Text>
+         <Text style={{
+            fontFamily:'outfit',
+            fontSize:13,
+        }}>{business.address}</Text>
+      </View>
+    </View>
+  )
+}
+
+export default PopularBusinessCard
